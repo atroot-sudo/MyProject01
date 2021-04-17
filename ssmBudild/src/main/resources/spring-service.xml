@@ -9,7 +9,8 @@
     <bean id="BookServiceImpl" class="com.theoldzheng.service.BookServiceImpl">
         <property name="bookMapper" ref="bookMapper"/>
     </bean>
-    <!--    声明配置事务-->
+
+    <!--声明配置事务-->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSources"/>
     </bean>

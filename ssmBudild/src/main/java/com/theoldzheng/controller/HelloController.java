@@ -5,7 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.awt.print.Book;
+
+import com.theoldzheng.pojo.Books;
 import java.util.List;
 
 /**
@@ -22,8 +23,8 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String hello(){
-        List<Book> books = bookService.queryAllBook();
-        for (Book book : books) {
+        List<Books> books = bookService.queryAllBook();
+        for (Books book : books) {
             System.out.println(book);
         }
         return "books";

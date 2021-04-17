@@ -28,12 +28,18 @@
         where id = #{id}
     </update>
 
-    <select id="queryById">
+    <select id="queryById" resultType="com.theoldzheng.pojo.Books">
         select * from ssmbuild.books where id  = #{id}
     </select>
 
-    <select id="queryAllBook">
+    <select id="queryAllBook" resultMap="book">
         select * from ssmbuild.books
     </select>
+    <resultMap id="book" type="com.theoldzheng.pojo.Books">
+        <id property="id" column="id"/>
+        <result property="bookName" column="book_name"/>
+        <result property="bookCount" column="book_count"/>
+        <result property="detail" column="detail"/>
+    </resultMap>
 
 </mapper>

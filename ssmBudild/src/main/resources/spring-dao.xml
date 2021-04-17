@@ -25,7 +25,7 @@
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 <!--        注入sqlSessionFactory-->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
-<!--        扫描sao-->
+<!--        扫描dao-->
         <property name="basePackage" value="com.theoldzheng.dao"/>
     </bean>
     <!--    使用sqlSessionTemplate 创建sqlSession对象-->

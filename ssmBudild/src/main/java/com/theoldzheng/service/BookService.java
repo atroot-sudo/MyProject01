@@ -1,6 +1,8 @@
 package com.theoldzheng.service;
 
-import java.awt.print.Book;
+
+import com.theoldzheng.pojo.Books;
+
 import java.util.List;
 
 /**
@@ -10,13 +12,13 @@ import java.util.List;
  * @create 2021.4.16 16:47
  */
 public interface BookService {
-    int addBook(Book book);
+    int addBook(Books book);
 
     int delete(Integer id);
 
-    int update(Book book);
+    int update(Books book);
 
-    Book queryById(Integer id);
+    Books queryById(Integer id);
 
-    List<Book> queryAllBook();
+    List<Books> queryAllBook();
 }

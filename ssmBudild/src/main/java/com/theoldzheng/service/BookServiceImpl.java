@@ -1,8 +1,8 @@
 package com.theoldzheng.service;
 
 import com.theoldzheng.dao.BookMapper;
+import com.theoldzheng.pojo.Books;
 
-import java.awt.print.Book;
 import java.util.List;
 
 /**
@@ -20,7 +20,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public int addBook(Book book) {
+    public int addBook(Books book) {
         return bookMapper.addBook(book);
     }
 
@@ -30,17 +30,17 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public int update(Book book) {
+    public int update(Books book) {
         return bookMapper.update(book);
     }
 
     @Override
-    public Book queryById(Integer id) {
+    public Books queryById(Integer id) {
         return bookMapper.queryById(id);
     }
 
     @Override
-    public List<Book> queryAllBook() {
+    public List<Books> queryAllBook() {
         return bookMapper.queryAllBook();
     }
 }
